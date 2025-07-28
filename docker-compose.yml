@@ -1,0 +1,13 @@
+services:
+  ghost-benwest:
+    image: ghost:5
+    container_name: ghost_benwest
+    restart: always
+    ports:
+      - 2370:2368
+    environment:
+      database__client: sqlite3
+      database__connection__filename: /var/lib/ghost/content/data/ghost.db
+      url: http://localhost:2370
+    volumes:
+      - ./content:/var/lib/ghost/content
