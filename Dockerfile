@@ -1,6 +1,6 @@
 FROM ghost:5
 
-ENV url=https://my-ghost-blog-77pf.onrender.com
+ENV url=https://benwest.blog
 ENV database__client=sqlite3
 ENV database__connection__filename=/var/lib/ghost/content/data/ghost.db
 
@@ -16,6 +16,5 @@ FROM ghost:5
 COPY config.production.json /var/lib/ghost/config.production.json
 
 
-# At end of Dockerfile
-RUN npx knex-migrator init
+# At end of Dockerfiles
 
