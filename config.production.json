@@ -1,5 +1,5 @@
 {
-"url": "https://my-ghost-blog-77pf.onrender.com"
+  "url": "https://my-ghost-blog-77pf.onrender.com",
   "mail": {
     "transport": "SMTP",
     "options": {
@@ -8,8 +8,8 @@
       "port": 587,
       "secureConnection": false,
       "auth": {
-        "user": "hey@benwest.blog",
-        "pass": "wgY8AOdIRfSTPGNK"
+        "user": "your_verified_email@yourdomain.com",
+        "pass": "your_actual_smtp_key"
       }
     }
   },
@@ -24,3 +24,4 @@
     "port": 2368
   }
 }
+
