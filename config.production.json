@@ -1,7 +1,17 @@
 {
   "url": "https://benwest.blog",
   "mail": {
-    "transport": "direct"
+    "transport": "SMTP",
+    "options": {
+      "service": "Brevo",
+      "host": "smtp-relay.brevo.com",
+      "port": 587,
+      "secureConnection": false,
+      "auth": {
+        "user": "hey@benwest.blog",
+        "pass": "wgY8AOdIRfSTPGNK"
+      }
+    }
   },
   "database": {
     "client": "sqlite3",
