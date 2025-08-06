@@ -1,18 +1,5 @@
 {
   "url": "https://my-ghost-blog-77pf.onrender.com",
-  "mail": {
-    "transport": "SMTP",
-    "options": {
-      "service": "Brevo",
-      "host": "smtp-relay.brevo.com",
-      "port": 587,
-      "secureConnection": false,
-      "auth": {
-        "user": "your_verified_email@yourdomain.com",
-        "pass": "your_actual_smtp_key"
-      }
-    }
-  },
   "database": {
     "client": "sqlite3",
     "connection": {
@@ -24,4 +11,3 @@
     "port": 2368
   }
 }
-
