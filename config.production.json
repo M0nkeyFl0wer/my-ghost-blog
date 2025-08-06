@@ -1,5 +1,5 @@
 {
-  "url": "https://my-ghost-blog-77pf.onrender.com",
+  "url": "https://benwest.blog",
   "database": {
     "client": "sqlite3",
     "connection": {
