@@ -10,8 +10,5 @@ COPY config.production.json /var/lib/ghost/config.production.json
 # Expose Ghost's default port
 EXPOSE 2368
 
-# Define the content volume (Render mounts a disk here)
-VOLUME /var/lib/ghost/content
-
-# Start Ghost
+# Start Ghost (Render persistent disk will mount at /var/lib/ghost/content)
 CMD ["node", "current/index.js"]
