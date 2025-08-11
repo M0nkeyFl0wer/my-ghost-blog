@@ -4,11 +4,16 @@ FROM ghost:5
 ENV database__client=sqlite3
 ENV database__connection__filename=/var/lib/ghost/content/data/ghost.db
 
-# Copy just the config file
+# Copy config and init script
 COPY config.production.json /var/lib/ghost/config.production.json
+COPY init-content.sh /usr/local/bin/init-content.sh
+RUN chmod +x /usr/local/bin/init-content.sh
 
 # Expose Ghost's default port
 EXPOSE 2368
 
-# Start Ghost (Render persistent disk will mount at /var/lib/ghost/content)
-CMD ["node", "current/index.js"]
+# Define the content volume (Render mounts a disk here)
+VOLUME /var/lib/ghost/content
+
+# Initialize content and start Ghost
+CMD ["/usr/local/bin/init-content.sh && node current/index.js"]
