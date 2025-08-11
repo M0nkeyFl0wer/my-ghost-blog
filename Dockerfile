@@ -16,4 +16,4 @@ EXPOSE 2368
 VOLUME /var/lib/ghost/content
 
 # Initialize content and start Ghost
-CMD ["/usr/local/bin/init-content.sh && node current/index.js"]
+CMD ["/bin/bash", "-c", "/usr/local/bin/init-content.sh && node current/index.js"]
